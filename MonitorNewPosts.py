@@ -15,7 +15,7 @@ stop_event = Event()
 
 api_id = config["MonitorNewPost"]["api_id"]
 api_hash = config["MonitorNewPost"]["api_hash"]
-proxytype = config["MonitorNewPost"]["proxytype"]
+proxytype = config["Global"]["proxytype"]
 minimumviews = int(config["Global"]["minimumviews"])
 MonitoringList = config["MonitorNewPost"]["monitorchannel"]
 MonitoringList = [int(id.strip()) for id in MonitoringList.split(",") if id]
@@ -66,7 +66,7 @@ def terminal():
             print(f"[+] Ip Uage :{ipusageformated}")
         print("\n\n")
         time.sleep(2)
-        # system('cls' if name=='nt' else 'clear')
+        system('cls' if name=='nt' else 'clear')
 
 client.start()
 Thread(target=terminal).start()
